@@ -8,34 +8,35 @@ import org.testng.annotations.Test;
 
 public class TestFirst {
 
-  @Test
-    public void launch1(){
-//        System.out.println(System.getProperty("user.dir"));
-//        System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/main/java/org/sele/git/chromedriverlinux");
-      WebDriverManager.chromedriver().setup();
-
-      ChromeOptions options = new ChromeOptions();
-      options.addArguments("--no-sandbox");
-      options.addArguments("--disable-dev-shm-usage");
-      options.addArguments("--headless");
-         WebDriver driver = new ChromeDriver(options);
-        driver.get("https://www.javatpoint.com/selenium-webdriver-first-test-case");
+    @Test
+    public void launch1() throws InterruptedException {
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        WebDriver driver = new ChromeDriver(options);
+        driver.get("https://en.wikipedia.org/wiki/Docker_(software)");
+        Thread.sleep(4000);
+        driver.quit();
 
     }
+
     @Test
-    public void launch2(){
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\MSI1\\IdeaProjects\\seleniumGithubActions\\src\\main\\java\\org\\sele\\git\\chromedriverlinux");
-        WebDriver driver = new ChromeDriver();
+    public void launch2() throws InterruptedException {
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        WebDriver driver = new ChromeDriver(options);
         driver.get("https://www.browserstack.com/docs/automate/selenium/github-actions");
-
+        Thread.sleep(4000);
+        driver.quit();
     }
+
     @Test
-    public void launch3(){
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\MSI1\\IdeaProjects\\seleniumGithubActions\\src\\main\\java\\org\\sele\\git\\chromedriverlinux");
-        WebDriver driver = new ChromeDriver();
+    public void launch3() throws InterruptedException {
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        WebDriver driver = new ChromeDriver(options);
         driver.get("https://github.com/features/actions");
-
-
+        Thread.sleep(4000);
+        driver.quit();
 
     }
 }
