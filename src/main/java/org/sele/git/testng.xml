@@ -1,0 +1,13 @@
+
+<suite name="suite1">
+<test name = "test11">
+    <classes>
+        <class name="org.sele.git.TestFirst">
+        <methods>
+           <include name="launch1"/>
+        </methods>
+        </class>
+    </classes>
+
+</test>
+</suite>
