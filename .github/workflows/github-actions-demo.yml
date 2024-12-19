@@ -11,5 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo ls ${{ github.workspace }}
-      - run: cd /home/runner/work/selenium-github-actions/selenium-github-actions
+      - run: cd ${{ github.workspace}}
       - run: mvn clean test -Dsurefire.suiteXmlFiles="src/main/java/org/sele/git/testng.xml"
