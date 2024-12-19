@@ -13,5 +13,12 @@ jobs:
     steps:
       - run: echo ls ${{ github.workspace }}
       - name: Standard Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+      - name: setup jdk 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: maven
+
       - run: mvn clean test -Dsurefire.suiteXmlFiles="src/main/java/org/sele/git/testng.xml"
