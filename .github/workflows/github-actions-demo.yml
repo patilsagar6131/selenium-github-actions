@@ -3,7 +3,6 @@ run-name: ${{ github.actor }} is testing out GitHub Actions for selenium tests
 on:
   push:
     paths-ignore:
-      - '.github/**'
       - '.idea'
       - 'target'
 
