@@ -8,7 +8,8 @@ public class TestFirst {
 
     @Test
     public void launch1(){
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\MSI1\\IdeaProjects\\seleniumGithubActions\\src\\main\\java\\org\\sele\\git\\chromedriver.exe");
+        System.out.println(System.getProperty("user.dir"));
+        System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/main/java/org/sele/git/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.javatpoint.com/selenium-webdriver-first-test-case");
 
