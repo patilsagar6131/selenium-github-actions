@@ -28,3 +28,4 @@ jobs:
 #          install-chromedriver: true
       - name: build with maven
         run: mvn  test -Dsurefire.suiteXmlFiles="src/main/java/org/sele/git/testng.xml"
+
