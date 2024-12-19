@@ -20,10 +20,10 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: maven
-      - name: setup-chrome
+      - name: Setup chrome
         uses: browser-actions/setup-chrome@v1
-        run: chrome --version
-        install-chromedriver: true
-
+        with:
+          chrome-version: 120
+          install-chromedriver: true
       - name: build with maven
         run: mvn  test -Dsurefire.suiteXmlFiles="src/main/java/org/sele/git/testng.xml"
