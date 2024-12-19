@@ -7,7 +7,7 @@ on:
       - 'target'
 
 jobs:
-  run selenium tests:
+  run-selenium-tests:
     runs-on: ubuntu-latest
     steps:
       - run: echo ls ${{ github.workspace }}
