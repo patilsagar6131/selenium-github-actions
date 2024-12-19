@@ -11,5 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo ls ${{ github.workspace }}
-      - run: cd ${{ github.workspace}}
+      - name: Standard Checkout
+        uses: actions/checkout@v2
       - run: mvn clean test -Dsurefire.suiteXmlFiles="src/main/java/org/sele/git/testng.xml"
