@@ -22,7 +22,6 @@ jobs:
           cache: maven
       - name: setup-chrome
         uses: browser-actions/setup-chrome@v1
-      - name: version of chrome
         run: chrome --version
         install-chromedriver: true
 
