@@ -24,6 +24,7 @@ public class TestFirst {
     public void launch2() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://www.browserstack.com/docs/automate/selenium/github-actions");
         Thread.sleep(4000);
@@ -34,6 +35,7 @@ public class TestFirst {
     public void launch3() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://github.com/features/actions");
         Thread.sleep(4000);
