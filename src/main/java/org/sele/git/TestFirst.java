@@ -3,6 +3,7 @@ package org.sele.git;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 public class TestFirst {
@@ -12,7 +13,12 @@ public class TestFirst {
 //        System.out.println(System.getProperty("user.dir"));
 //        System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/main/java/org/sele/git/chromedriverlinux");
       WebDriverManager.chromedriver().setup();
-      WebDriver driver = new ChromeDriver();
+
+      ChromeOptions options = new ChromeOptions();
+      options.addArguments("--no-sandbox");
+      options.addArguments("--disable-dev-shm-usage");
+      options.addArguments("--headless");
+         WebDriver driver = new ChromeDriver(options);
         driver.get("https://www.javatpoint.com/selenium-webdriver-first-test-case");
 
     }
