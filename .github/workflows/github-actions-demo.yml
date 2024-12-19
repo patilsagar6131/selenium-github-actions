@@ -20,7 +20,9 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: maven
-      - uses: browser-actions/setup-chrome@v1
+      - name: setup-chrome
+        uses: browser-actions/setup-chrome@v1
+      - name: version of chrome
         run: chrome --version
         install-chromedriver: true
 
