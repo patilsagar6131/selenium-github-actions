@@ -12,6 +12,7 @@ public class TestFirst {
     public void launch1() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://en.wikipedia.org/wiki/Docker_(software)");
         Thread.sleep(4000);
