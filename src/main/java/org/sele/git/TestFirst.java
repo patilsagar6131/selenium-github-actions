@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class TestFirst {
 
-    @Test
+  @Test
     public void launch1(){
         System.out.println(System.getProperty("user.dir"));
         System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/main/java/org/sele/git/chromedriver.exe");
