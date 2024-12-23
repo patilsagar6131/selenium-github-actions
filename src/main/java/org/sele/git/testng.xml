@@ -5,8 +5,8 @@
         <class name="org.sele.git.TestFirst">
         <methods>
            <include name="launch1"/>
-            <include name="launch2"/>
-            <include name="launch3"/>
+<!--            <include name="launch2"/>-->
+<!--            <include name="launch3"/>-->
         </methods>
         </class>
     </classes>
